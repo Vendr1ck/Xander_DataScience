@@ -1,0 +1,9 @@
+{"name": "Vendrick", "score": 0, "date": "2022-02-21", "word": "togue"}
+{"name": "Vendrick", "score": 147, "date": "2022-02-21", "word": "coppled"}
+{"name": "Vendrick", "score": 147, "date": "2022-02-21", "word": "lowborn"}
+{"name": "Vendrick", "score": 0, "date": "2022-02-21", "word": "filly"}
+{"name": "Vendrick", "score": 0, "date": "2022-02-21", "word": "fasti"}
+{"name": "Vendrick", "score": 0, "date": "2022-02-21", "word": "cadre"}
+{"name": "Vendrick", "score": 0, "date": "2022-02-21", "word": "gaily"}
+{"name": "Vendrick", "score": 50, "date": "2022-02-21", "word": "scern"}
+{"name": "Vendrick", "score": 243, "date": "2022-02-21", "word": "palestric"}
