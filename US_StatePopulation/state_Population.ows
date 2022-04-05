@@ -2,14 +2,14 @@
 <scheme version="2.0" title="" description="">
 	<nodes>
 		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Population" position="(68.0, 272.0)" />
-		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Area" position="(155.0, 387.0)" />
-		<node id="2" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data (1)" position="(359.0, 323.0)" />
+		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Area" position="(107.0, 377.0)" />
+		<node id="2" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data (1)" position="(350.0, 275.0)" />
 		<node id="3" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Select Rows" position="(251.0, 242.0)" />
 		<node id="4" name="Feature Constructor" qualified_name="Orange.widgets.data.owfeatureconstructor.OWFeatureConstructor" project_name="Orange3" version="" title="Feature Constructor" position="(528.0, 322.0)" />
 		<node id="5" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table (1)" position="(506.0, 188.0)" />
-		<node id="6" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Abbrev" position="(156.0, 468.0)" />
-		<node id="7" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data" position="(266.0, 433.0)" />
-		<node id="8" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(294.0, 368.0)" />
+		<node id="6" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="Abbrev" position="(106.0, 476.0)" />
+		<node id="7" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data" position="(201.0, 425.0)" />
+		<node id="8" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns" position="(256.0, 339.0)" />
 		<node id="9" name="Select Columns" qualified_name="Orange.widgets.data.owselectcolumns.OWSelectAttributes" project_name="Orange3" version="" title="Select Columns (1)" position="(441.0, 275.0)" />
 		<node id="10" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(624.0, 266.0)" />
 		<node id="11" name="Bar Plot" qualified_name="Orange.widgets.visualize.owbarplot.OWBarPlot" project_name="Orange3" version="" title="Bar Plot (1)" position="(776.0, 271.0)" />
@@ -112,15 +112,15 @@ aBlLAoaUjApwb3B1bGF0aW9ulEsChpRoGUsDhpSMDWFyZWEgKHNxLiBtaSmUSwKGlGgZSwSGlHVK
 lGgTSwNzdWJhdS4=
 </properties>
 		<properties node_id="10" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc0\x00\x00\x01\xc7\x00\x00\x06A\x00\x00\x03\xcd\x00\x00\x03\xc1\x00\x00\x01\xed\x00\x00\x06@\x00\x00\x03\xcc\x00\x00\x00\x00\x00\x00\x00\x00\n\x00\x00\x00\x03\xc1\x00\x00\x01\xed\x00\x00\x06@\x00\x00\x03\xcc', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 2}</properties>
-		<properties node_id="11" format="pickle">gASV1QEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
-ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAALJAAABLwAACDkAAAQOAAACygAAAVUAAAg4AAAE
-DQAAAAAAAAAACgAAAALKAAABVQAACDgAAAQNlIwJc2VsZWN0aW9ulE6MD3Zpc3VhbF9zZXR0aW5n
+		<properties node_id="11" format="pickle">gASV7gEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAEqAAAAmwAABnAAAANaAAABKwAAALoAAAZvAAAD
+WQAAAAAAAAAAB4AAAAErAAAAugAABm8AAANZlIwJc2VsZWN0aW9ulE6MD3Zpc3VhbF9zZXR0aW5n
 c5R9lIwFZ3JhcGiUfZSMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFu
 Z2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAlhbm5vdF92
 YXKUTkr+////hpSMCWNvbG9yX3ZhcpROSv7///+GlIwJZ3JvdXBfdmFylIwMc3RhdGUvcmVnaW9u
 lEtlhpSMDHNlbGVjdGVkX3ZhcpSMC1BvcCBEZW5zaXR5lEtmhpRoCH2UaApLAXWMCmF0dHJpYnV0
-ZXOUfZQoaBlLAYwEYWdlc5RLAYwEeWVhcpRLAowKcG9wdWxhdGlvbpRLAowNYXJlYSAoc3EuIG1p
-KZRLAmgcSwJ1jAVtZXRhc5R9lHViYXUu
+ZXOUfZQojAxzdGF0ZS9yZWdpb26USwGMBGFnZXOUSwGMBHllYXKUSwKMCnBvcHVsYXRpb26USwKM
+DWFyZWEgKHNxLiBtaSmUSwKMC1BvcCBEZW5zaXR5lEsCdYwFbWV0YXOUfZR1YmF1Lg==
 </properties>
 	</node_properties>
 	<session_state>
