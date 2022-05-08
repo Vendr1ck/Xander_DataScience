@@ -1,0 +1,99 @@
+# queryString = "https://www.bungie.net/Platform/Destiny2/-1/Account/" + str(personalMembershipID) + "/Character/" + str(personalWarlockID) + "/Stats/Activities/?count=" + str(gamesCount) + "&mode=" + str(mode) + "&page=0"
+# activityHist = rq.get(queryString, headers=HEADERS) #"https://www.bungie.net/Platform/Destiny2/-1/Account/4611686018434543311/Character/2305843009292406567/Stats/Activities/?count=50&mode=10&page=0"
+# masterDates = pd.DataFrame.from_dict(activityHist.json()["Response"]["activities"], orient="columns")
+# for i in range(len(playerDF.index)):
+#     # testString = "https://www.bungie.net/Platform/Destiny2/-1/Account/" + str(4611686018430139340) + "/Character/" + str(getCharacterID(4611686018430139340))
+#     #  + "/Stats/Activities/?count=" + str(gamesCount) + "&mode=" + str(mode) + "&page=0"
+#     # testHist = rq.get(testString, headers=HEADERS)
+#     # testDF = pd.DataFrame.from_dict(testHist.json()["Response"]["activities"], orient="columns")
+#     appendString = "https://www.bungie.net/Platform/Destiny2/-1/Account/" + str(playerDF.at[i,"accountId"]) + "/Character/" + str(playerDF.at[i, "characterId"]) + "/Stats/Activities/?count=" + str(gamesCount) + "&mode=" + str(mode) + "&page=0"
+#     toAppend = rq.get(appendString, headers=HEADERS)
+#     if toAppend.json()["ErrorCode"] == 1:
+#         appendDF = pd.DataFrame.from_dict(toAppend.json()["Response"]["activities"], orient="columns")
+#     else:
+#         continue
+#     masterDates = pd.concat([masterDates, appendDF], ignore_index=True)
+    
+# instanceIds = masterDates.activityDetails.apply(pd.Series)
+# instanceIds = instanceIds[["instanceId"]]
+# masterDates = pd.concat([masterDates, instanceIds], axis=1) #gets the match instanceIds for PGCR AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+# masterDates.drop_duplicates(subset=["instanceId"], inplace=True, ignore_index=True)
+# print(masterDates) #use in instanceId field for running PGCRs
+
+# for i in range(len(masterDates.index)):
+#     pgcr = rq.get("https://www.bungie.net/Platform/Destiny2/Stats/PostGameCarnageReport/" + str(masterDates.at[i, "instanceId"]), headers=HEADERS)
+#     if pgcr.json()["ErrorCode"] == 1:
+#         pgcrDF = pd.DataFrame.from_dict(pgcr.json()["Response"], orient="index").T
+#         pgcrDF = pgcrDF[["period", "entries"]]
+#         currentDate = str(pgcrDF.iat[0,0])[:10]
+#         if len(pgcrDF["entries"][0]) <= 12:
+#             for j in range(len(pgcrDF["entries"][0])):
+#                 try:
+#                     for u in range(len(pgcrDF["entries"][0][j]["extended"]["weapons"])):
+#                         weaponId = pgcrDF["entries"][0][j]["extended"]["weapons"][u]["referenceId"]
+#                         weaponKills = pgcrDF["entries"][0][j]["extended"]["weapons"][u]["values"]["uniqueWeaponKills"]["basic"]["value"]
+#                         append = pd.DataFrame({"date":[currentDate], "weaponId":[weaponId], "kills":[weaponKills]})
+#                         weaponDF = pd.concat([weaponDF, append], ignore_index=True)
+#                 except:
+#                     pass
+# print(weaponDF)
+# print(pgcrInstanceList)
+
+# weaponDF = weaponDF.groupby(["date", "weaponId"])["kills"].sum().reset_index()
+# print(weaponDF)
+
+# weaponDF.plot.line()
+# pgcr = rq.get("https://www.bungie.net/Platform/Destiny2/Stats/PostGameCarnageReport/10689963777", headers=HEADERS)
+# pgcrJSON = pgcr.json()
+# pgcrDF = pd.DataFrame.from_dict(pgcrJSON["Response"], orient="index").T
+# pgcrDF = pgcrDF[["period","entries"]]
+# entriesDF = pgcrDF["entries"][0][0] #the second int is 0-11 for each player in the match
+# weaponDF = pgcrDF["entries"][0][0]["extended"]["weapons"]#array of weapons and kills
+# # print(len(pgcrDF["entries"]))
+# # print(pgcrDF["entries"])
+# print(len(weaponDF))
+# print(weaponDF)
+# print(len(pgcrDF["entries"][0]))#checks if 12 players were in the match
+# print(entriesDF)
+# print("\n\n\n")
+# print(pgcrDF)
+# print("\n\n\n")
+# print(pgcrJSON)
+# print("\n\n\n")
+
+#from here do the interpretation of numbers for weapons into text and then plot. the dataframe should be filled by this step and just needs to be relabelled and plotted
+
+#==================================================================================EXPERIMENTAL/OLD============================================================================================
+
+# historicalStats = rq.get("https://www.bungie.net/Platform/Destiny2/2/Account/4611686018434543311/Character/2305843009292406567/Stats/?dayend=2022-04-30&daystart=
+# 2022-04-5&groups=General&periodType=Daily&modes=10", headers=HEADERS)
+# histStatsJSON = historicalStats.json()
+# # print(histStatsJSON)
+# histStatsDF = pd.DataFrame.from_dict(histStatsJSON["Response"], orient="columns")
+# # histStatsDF.drop(["allTime"], axis=0, inplace=True)
+# statsDF = pd.DataFrame.from_dict(histStatsDF.iloc[0][0])
+# print(histStatsDF)
+# # print("\n\n\n")
+# # print(histStatsDF2)
+# print("\n\n\n")
+# print(histStatsJSON)
+
+# weaponHistory = rq.get("https://www.bungie.net/Platform/Destiny2/2/Account/4611686018434543311/Character/2305843009292406567/Stats/UniqueWeapons", headers=HEADERS)
+# WH = weaponHistory.json()
+# WHDF = pd.DataFrame.from_dict(WH["Response"]["weapons"][1], orient="columns")
+# print(WHDF)
+# print("\n\n\n")
+# print(WH) 
+
+# r = rq.get("https://www.bungie.net/Platform/User/GetCredentialTypesForTargetAccount/2812", headers=HEADERS)
+# r2 = rq.get("https://www.bungie.net/Platform/Destiny2/2/Profile/4611686018434543311/?components=Profiles,Characters", headers=HEADERS)
+# print(r.json())
+# print("\n\n\n")
+# print(r2.json()["Response"]["profile"]["data"]["characterIds"])
+# print(r2.json()["Response"]["characters"])
+# print(r2.json())
+# print(r2.json()["ErrorCode"])
+
+#debug - instanceID=10594195554 | referenceID=1141558876
+
+#4611686018430139340 - Flik account
